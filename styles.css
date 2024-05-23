@@ -76,6 +76,11 @@ body {
 .header .link {
   text-decoration: none;
   color: hsl(0, 0%, 75%);
+  transition: color 0.3s ease;
+}
+
+.header .link:hover {
+  color: hsl(260, 8%, 14%);
 }
 
 .nav .logo-links {
@@ -132,12 +137,18 @@ body {
   background: hsl(180, 66%, 49%);
   color: white;
   border-radius: 34px;
+  transition: background 0.3s ease;
 }
 
 .secondary-button {
   background: hsl(180, 66%, 49%);
   color: white;
   border-radius: 16px;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  background: hsl(180, 66%, 70%);
 }
 
 .heading .heading-img-wrapper {
@@ -177,6 +188,10 @@ body {
   padding: 0 14px;
   border-radius: 6px;
   outline: 0;
+}
+
+.shorten-links .input-wrapper .input-error {
+  outline: 2px solid hsl(0, 87%, 67%);
 }
 
 .shorten-links .input-wrapper .button {
@@ -299,6 +314,11 @@ body {
 .footer .links-block .link {
   text-decoration: none;
   color: hsl(0, 0%, 75%);
+  transition: color 0.3s ease;
+}
+
+.footer .links-block .link:hover {
+  color: hsl(180, 66%, 49%);
 }
 
 .footer .social-links {
@@ -307,6 +327,11 @@ body {
   justify-content: center;
   margin-top: 40px;
   gap: 26px;
+}
+
+.footer .social-links .link:hover {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(97%) saturate(2929%)
+    hue-rotate(128deg) brightness(85%) contrast(90%);
 }
 
 @media screen and (min-width: 1024px) {
