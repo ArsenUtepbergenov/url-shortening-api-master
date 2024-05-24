@@ -1,3 +1,4 @@
+import './src/styles.scss'
 import Menu from './src/menu.js'
 import ShortLink from './src/shortLink.js'
 
