@@ -1,0 +1,15 @@
+{
+  "name": "url-shortening-api-master",
+  "version": "1.0.1",
+  "description": "url-shortening-api-master",
+  "main": "main.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "request": "^2.88.2"
+  }
+}

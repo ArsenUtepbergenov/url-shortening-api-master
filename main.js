@@ -1,8 +1,5 @@
-console.log('test')
+import Menu from './src/menu.js'
+import ShortLink from './src/shortLink.js'
 
-const toggleMenu = document.getElementById('navMenuButton')
-const menu = document.getElementById('navMobile')
-
-toggleMenu.addEventListener('click', () => {
-  menu.classList.toggle('show')
-})
+const shortLink = new ShortLink()
+const menu = new Menu()

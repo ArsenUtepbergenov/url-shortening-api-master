@@ -13,6 +13,57 @@ body {
   overflow-x: hidden;
 }
 
+.links-list {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+  top: -36px;
+  gap: 20px;
+}
+
+.links-list .item {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+}
+
+.links-list .link {
+  padding: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.links-list .link.origin {
+  color: hsl(260, 8%, 14%);
+}
+
+.links-list .link.shorten {
+  color: hsl(180, 66%, 49%);
+}
+
+.links-list .button {
+  margin: 0 14px 14px 14px;
+}
+
+.links-list .button.copied {
+  background: hsl(257, 27%, 26%);
+}
+
+.links-list .item .hr {
+  width: 100%;
+  height: 1px;
+  background: hsl(0deg 0% 89.12%);
+}
+
+.error-message {
+  font-style: italic;
+  color: hsl(0, 87%, 67%);
+  font-size: 14px;
+}
+
 .container {
   margin: auto 20px;
 }
@@ -73,6 +124,7 @@ body {
   gap: 20px;
 }
 
+.links-list .link,
 .header .link {
   text-decoration: none;
   color: hsl(0, 0%, 75%);
@@ -166,7 +218,7 @@ body {
   padding: 0 20px 100px 20px;
 }
 
-.shorten-links .input-wrapper {
+.shorten-links .form {
   position: relative;
   margin: auto;
   background: url('./images/bg-shorten-mobile.svg') no-repeat right hsl(257, 27%, 26%);
@@ -181,7 +233,7 @@ body {
   top: -60px;
 }
 
-.shorten-links .input-wrapper .input {
+.shorten-links .form .input {
   height: 40px;
   min-width: 80px;
   border: 0;
@@ -190,11 +242,12 @@ body {
   outline: 0;
 }
 
-.shorten-links .input-wrapper .input-error {
+.shorten-links .form .input-error {
   outline: 2px solid hsl(0, 87%, 67%);
 }
 
-.shorten-links .input-wrapper .button {
+.shorten-links .links-list .button,
+.shorten-links .form .button {
   border-radius: 6px;
 }
 
@@ -335,6 +388,23 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
+  .links-list .item .hr {
+    background: inherit;
+  }
+
+  .links-list .button {
+    margin: 14px;
+  }
+
+  .links-list .item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .links-list .link {
+    overflow: unset;
+  }
+
   .footer .social-links {
     margin-top: unset;
   }
@@ -430,7 +500,7 @@ body {
     display: flex;
   }
 
-  .shorten-links .input-wrapper {
+  .shorten-links .form {
     flex-direction: row;
     justify-content: stretch;
     padding: 40px 80px;
@@ -440,17 +510,17 @@ body {
     background-size: cover;
   }
 
-  .shorten-links .input-wrapper .input {
+  .shorten-links .form .input {
     flex-grow: 4;
   }
 
-  .shorten-links .input-wrapper .button {
+  .shorten-links .form .button {
     flex-grow: 1;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .shorten-links .input-wrapper,
+  .shorten-links .form,
   .container {
     margin: auto;
     max-width: 1440px;

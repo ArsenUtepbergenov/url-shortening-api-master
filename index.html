@@ -12,7 +12,7 @@
     />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <title>Shortly URL</title>
-    <link href="styles.css" rel="stylesheet" />
+    <link href="./src/styles.css" rel="stylesheet" />
   </head>
   <body class="body">
     <section class="container">
@@ -64,10 +64,27 @@
       </section>
     </section>
     <section class="shorten-links">
-      <div class="input-wrapper">
-        <input type="text" class="input" />
-        <button type="button" class="button primary-button">Shorten It!</button>
-      </div>
+      <form id="shortenForm" action="" method="post" class="form">
+        <input
+          id="linkInput"
+          type="url"
+          class="input"
+          placeholder="Shorten a link here..."
+          pattern="https://.*"
+          maxlength="30"
+          minlength="5"
+          autofocus
+          autocomplete="on"
+          title="Enter a valid URL starting with https://"
+          inputmode="url"
+          spellcheck="false"
+        />
+        <label for="url" id="errorMessage" class="error-message"></label>
+        <button id="submitBtn" type="submit" class="button primary-button">
+          Shorten It!
+        </button>
+      </form>
+      <div id="linksList" class="links-list"></div>
       <div class="advanced-statistics">
         <h3 class="h3">Advanced Statistics</h3>
         <h5 class="h5">
@@ -157,6 +174,6 @@
         </div>
       </div>
     </footer>
-    <!-- <script src="./main.js" type="module" /> -->
+    <script src="./main.js" type="module" />
   </body>
 </html>
