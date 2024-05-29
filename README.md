@@ -1,8 +1,12 @@
-## The challenge
+# Frontend Mentor - Shortly URL shortening API Challenge solution
 
-Your challenge is to build out this landing page, integrate with the [Clean URI API](https://cleanuri.com/docs) and get it looking as close to the design as possible.
+This is a solution to the [Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G)
 
-Your users should be able to:
+## Overview
+
+### The challenge
+
+Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - Shorten any valid URL
@@ -11,8 +15,14 @@ Your users should be able to:
 - Receive an error message when the `form` is submitted if:
   - The `input` field is empty
 
-## Deploying your project
+### Links
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- Solution URL: [https://github.com/ArsenUtepbergenov/url-shortening-api-master/tree/main]
+- Live Site URL: [https://arsenutepbergenov.github.io/url-shortening-api-master/]
+
+## My process
+
+### Built with
+
+- Pure Js, Css, HTML
+- Proxy server for https://cleanuri.com/api/v1/shorten
