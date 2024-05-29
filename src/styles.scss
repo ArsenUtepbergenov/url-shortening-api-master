@@ -388,6 +388,11 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
+  .form .error-message {
+    order: 3;
+    width: 100%;
+  }
+
   .links-list .item .hr {
     background: inherit;
   }
@@ -508,6 +513,7 @@ body {
     background-image: url('./images/bg-shorten-desktop.svg');
     background-position: center;
     background-size: cover;
+    flex-wrap: wrap;
   }
 
   .shorten-links .form .input {
